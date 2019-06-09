@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\MainController.cs" />
+     <Compile Include="Assets\Scripts\SpiteController.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>D:/work/2dClick/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
