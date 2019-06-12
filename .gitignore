@@ -64,7 +64,6 @@ StyleCopReport.xml
 *_p.c
 *_h.h
 *.ilk
-*.meta
 *.obj
 *.iobj
 *.pch
@@ -87,6 +86,7 @@ StyleCopReport.xml
 *.pidb
 *.svclog
 *.scc
+*.meta
 
 # Chutzpah Test files
 _Chutzpah*
@@ -340,3 +340,6 @@ ASALocalRun/
 healthchecksdb
 /Library
 /Temp
+
+# Never ignore Asset meta data
+!/[Aa]ssets/**/*.meta
