@@ -57,6 +57,7 @@
     <Compile Include="Assets\Model\Particles\MagicOrb\Script.cs" />
     <Compile Include="Assets\Scripts\AnimationScript.cs" />
     <Compile Include="Assets\Scripts\MainController.cs" />
+    <Compile Include="Assets\Scripts\Generator.cs" />
     <Compile Include="Assets\Scripts\SpiteController.cs" />
     <Compile Include="Assets\Scripts\BallController.cs" />
     <None Include="Assets\Model\Shaders\Gem.shader" />

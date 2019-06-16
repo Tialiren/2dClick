@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7892059641859868501}
   - component: {fileID: 1429707079}
   m_Layer: 0
-  m_Name: BallAqua
+  m_Name: BallGreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8db18a6c97d60430eb2a6b453d760edd, type: 2}
+  - {fileID: 2100000, guid: 76344fa569918448ea8a7c76f4950983, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

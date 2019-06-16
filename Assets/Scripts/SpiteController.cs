@@ -18,6 +18,6 @@ public class SpiteController : MonoBehaviour
 
     void OnMouseDown()
     {
-        MainController.CalcClick();
+        //MainController.CalcClick();
     }
 }
