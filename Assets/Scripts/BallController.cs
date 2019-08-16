@@ -32,12 +32,11 @@ public class BallController : MonoBehaviour
         {
             transform.localScale = Vector3.Lerp(transform.localScale, endScale, scaleSpeed * Time.deltaTime);
         }
-
     }
 
     void OnMouseDown()
     {
-        MainController.Main.SetScore(Score);
+        ScoreController.Main.SetScore(Score);
         Destroy(gameObject);
     }
 

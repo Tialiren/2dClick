@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Ball.unity
+    guid: 2b43c93bd9df55b48b95ae64ce52f3eb
+  - enabled: 1
+    path: Assets/Scenes/Tower.unity
+    guid: dcb667341f1df2549be0f87340ca6e81
   m_configObjects: {}
