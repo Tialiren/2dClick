@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
+
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float _speed;
@@ -11,6 +13,13 @@ public class PlayerController : MonoBehaviour
 
     private float _currentSpeedY;
     private float _currentSpeedX;
+
+    private Rigidbody2D rb2d;
+
+    void Awake()
+    {
+        rb2d = GetComponent<Rigidbody2D>();
+    }
 
     // Use this for initialization
     void Start()
@@ -41,8 +50,13 @@ public class PlayerController : MonoBehaviour
     
     private void FixedUpdate()
     {
-        transform.position = Vector3.Lerp(transform.position,
-            new Vector3(transform.position.x + _currentSpeedX, transform.position.y + _currentSpeedY), Time.deltaTime);
+        //transform.position = Vector3.Lerp(transform.position,
+          //  new Vector3(transform.position.x + _currentSpeedX, transform.position.y + _currentSpeedY), Time.deltaTime);
+
+
+            rb2d.velocity = new Vector2(Mathf.Lerp(0, _currentSpeedX, 0.8f),
+                                        Mathf.Lerp(0, _currentSpeedY, 0.8f));
+
     }
 
     void OnMouseDown()
