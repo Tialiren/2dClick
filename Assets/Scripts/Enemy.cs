@@ -24,22 +24,9 @@ public class Enemy: MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        point = target.transform.position;
+        PathGrid _pathGrin = new PathGrid(plane, obstacles, transform.position, target.transform.position);
 
-        GridLayout gridLayout = plane.GetComponent<GridLayout>();
-        Vector3Int cellPosition = gridLayout.WorldToCell(transform.localPosition);
 
-        GridLayout gridLayout2 = obstacles.GetComponent<GridLayout>();
-        Vector3Int cellPosition2 = gridLayout2.WorldToCell(transform.localPosition);
-
-        TileBase tile = obstacles.GetTile(cellPosition2);
-        TileBase _tile = plane.GetTile(cellPosition);
-
-        TilemapCollider2D tpmcollide = plane.GetComponent<TilemapCollider2D>();
-        TilemapCollider2D tpmcollide2 = obstacles.GetComponent<TilemapCollider2D>();
-
-        
-        
 
     }
 
