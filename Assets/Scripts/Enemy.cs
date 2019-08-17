@@ -1,46 +1,66 @@
 ﻿using UnityEngine;
-using System.Collections;
-
+using UnityEngine.Tilemaps;
 public class Enemy: MonoBehaviour
 {
-    [SerializeField] private float _speed;
-    [SerializeField] private GameObject _target;
+    [SerializeField] private float speed;
+    [SerializeField] private GameObject target;
+    [SerializeField] private Grid grid;
+    [SerializeField] private Tilemap plane;
+    [SerializeField] private Tilemap obstacles;
 
-    private float _currentSpeedY;
-    private float _currentSpeedX;
+    private float currentSpeedY;
+    private float currentSpeedX;
 
     private Rigidbody2D rb2d;
     private Vector3 point;
+    
 
     void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
+
     }
 
     // Use this for initialization
     void Start()
     {
-        point = _target.transform.position;
+        point = target.transform.position;
+
+        GridLayout gridLayout = plane.GetComponent<GridLayout>();
+        Vector3Int cellPosition = gridLayout.WorldToCell(transform.localPosition);
+
+        GridLayout gridLayout2 = obstacles.GetComponent<GridLayout>();
+        Vector3Int cellPosition2 = gridLayout2.WorldToCell(transform.localPosition);
+
+        TileBase tile = obstacles.GetTile(cellPosition2);
+        TileBase _tile = plane.GetTile(cellPosition);
+
+        TilemapCollider2D tpmcollide = plane.GetComponent<TilemapCollider2D>();
+        TilemapCollider2D tpmcollide2 = obstacles.GetComponent<TilemapCollider2D>();
+
+        
+        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        _currentSpeedY = 0;
-        _currentSpeedX = 0;
+        currentSpeedY = 0;
+        currentSpeedX = 0;
 
-        point = _target.transform.position;
+        point = target.transform.position;
 
 
     }
     
     private void FixedUpdate()
     {
-        transform.position = Vector3.Lerp(transform.position, point, Time.deltaTime * _speed);
+        transform.position = Vector3.Lerp(transform.position, point, Time.deltaTime * speed);
 
 
-          //  rb2d.velocity = new Vector2(Mathf.Lerp(0, _currentSpeedX, 0.8f),
-          //                              Mathf.Lerp(0, _currentSpeedY, 0.8f));
+          //  rb2d.velocity = new Vector2(Mathf.Lerp(0, currentSpeedX, 0.8f),
+          //                              Mathf.Lerp(0, currentSpeedY, 0.8f));
 
     }
 
@@ -50,3 +70,5 @@ public class Enemy: MonoBehaviour
     }
 
 }
+
+

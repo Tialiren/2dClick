@@ -70,9 +70,12 @@
     <Compile Include="Assets\Scripts\InterfaceController.cs" />
     <Compile Include="Assets\Scripts\MainController.cs" />
     <Compile Include="Assets\Scripts\MenuController.cs" />
+    <Compile Include="Assets\Scripts\PathFinder.cs" />
+    <Compile Include="Assets\Scripts\PathGrid.cs" />
+    <Compile Include="Assets\Scripts\PathNode.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\ScoreController.cs" />
-    <Compile Include="Assets\Scripts\SpiteController.cs" />
+    <Compile Include="Assets\Scripts\TileTravel.cs" />
     <None Include="Assets\Model\Shaders\Gem.shader" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/work/2dClick/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
